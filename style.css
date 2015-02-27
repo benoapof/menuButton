@@ -15,6 +15,7 @@ body {
 	background-color: #575757;
 	border: 1px solid #575757;
 	border-radius: 50%;
+	color: #575757;
 	cursor: pointer;
 	height: 40px;
 	overflow: hidden;
@@ -22,12 +23,13 @@ body {
 	position: fixed;
 		left: 10px;
 		top: 10px;
-	text-indent: 110%;
-	transition: transform .5s;
+	transition: transform .5s, background-color .5s, color .5s;
 	width: 40px;
 }
 .menuNavBtn.actif {
 	background-color: #009;
+	border-color: #000;
+	color: #009;
 	transform: rotate(180deg);
 }
 .menuNavBtn .icoMenu {
