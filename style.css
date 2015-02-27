@@ -1,0 +1,78 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*.after {
+	box-sizing: inherit;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.menuNavBtn {
+	background-color: #575757;
+	border: 1px solid #575757;
+	border-radius: 50%;
+	cursor: pointer;
+	height: 40px;
+	overflow: hidden;
+	padding: 0;
+	position: fixed;
+		left: 10px;
+		top: 10px;
+	text-indent: 110%;
+	transition: transform .5s;
+	width: 40px;
+}
+.menuNavBtn.actif {
+	background-color: #009;
+	transform: rotate(180deg);
+}
+.menuNavBtn .icoMenu {
+	background-color: #fff;
+	display: block;
+	height: 2px;
+	position: absolute;
+		left: 50%;
+		top: 50%;
+	transform: translate( -50%, -50%);
+	width: 18px;
+}
+.menuNavBtn .icoMenu:before,
+.menuNavBtn span:after {
+	background-color: #fff;
+	content: '';
+	height: 100%;
+	position: absolute;
+		left: 0;
+	transition: all .5s;
+	width: 100%;
+}
+.menuNavBtn .icoMenu:before {
+	top: -6px;
+}
+.menuNavBtn .icoMenu:after {
+	top: 6px;
+}
+.menuNavBtn:hover .icoMenu:before,
+.menuNavBtn.actif:hover .icoMenu:before {
+	top:-4px;
+}
+.menuNavBtn:hover .icoMenu:after,
+.menuNavBtn.actif:hover .icoMenu:after {
+	top:4px;
+}
+.menuNavBtn.actif .icoMenu:before {
+	left: 8px;
+	top: -4px;
+	transform: rotate(45deg);
+	width: 60%;
+}
+.menuNavBtn.actif .icoMenu:after {
+	left: 8px;
+	top: 4px;
+	transform: rotate(-45deg);
+	width: 60%;
+}
