@@ -18,6 +18,7 @@ body {
 	color: #575757;
 	cursor: pointer;
 	height: 40px;
+	outline: none;
 	overflow: hidden;
 	padding: 0;
 	position: fixed;
@@ -53,18 +54,22 @@ body {
 	width: 100%;
 }
 .menuNavBtn .icoMenu:before {
-	top: -6px;
+	top: -5px;
 }
 .menuNavBtn .icoMenu:after {
+	top: 5px;
+}
+.menuNavBtn:hover .icoMenu:before {
+	top: -6px;
+}
+.menuNavBtn.actif:hover .icoMenu:before {
+	top: -4px;
+}
+.menuNavBtn:hover .icoMenu:after {
 	top: 6px;
 }
-.menuNavBtn:hover .icoMenu:before,
-.menuNavBtn.actif:hover .icoMenu:before {
-	top:-4px;
-}
-.menuNavBtn:hover .icoMenu:after,
 .menuNavBtn.actif:hover .icoMenu:after {
-	top:4px;
+	top: 4px;
 }
 .menuNavBtn.actif .icoMenu:before {
 	left: 8px;
